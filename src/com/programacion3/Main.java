@@ -5,28 +5,18 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        ArbolBinario<String> ar = new ArbolBinario<>();
+        ArbolBinario<Integer> ar = new ArbolBinario<>();
 
-        ar.insert("Hola");
-        ar.insert("Chau");
-        ar.insert("Arriba");
-        ar.insert("Derecha");
-        ar.insert("Izquierda");
-        ar.insert("Abajo");
-        ar.insert("Frente");
-        ar.insert("Fondo");
+        ar.insert(4);
+        ar.insert(2);
+        ar.insert(1);
+        ar.insert(3);
+        ar.insert(6);
+        ar.insert(5);
+        ar.insert(7);
 
-        ar.preorder();
         ar.inorder();
-        ar.postorder();
-        try {
-            ar.delete("Fondo");
-            ar.delete("Chau");
-            ar.delete("Hola");
-            ar.delete("NoEstoy");
-        }catch (Exception e){
-            System.out.println(e);
-        }
-        System.out.println("andubo");
+        System.out.println(" ");
+        ar.print();
     }
 }

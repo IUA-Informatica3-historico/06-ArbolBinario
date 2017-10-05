@@ -95,4 +95,21 @@ class NodoArbolBinario<T extends Comparable> {
             der.postorder();
         System.out.print(dato.toString() + " ");
     }
+
+    public void print(boolean esDerecho, String identacion) {
+        if (der != null) {
+            der.print(true, identacion + (esDerecho ? "     " : "|    "));
+        }
+        System.out.print(identacion);
+        if (esDerecho) {
+            System.out.print(" /");
+        } else {
+            System.out.print(" \\");
+        }
+        System.out.print("-- ");
+        System.out.println(dato);
+        if (izq != null) {
+            izq.print(false, identacion + (esDerecho ? "|    " : "     "));
+        }
+    }
 }

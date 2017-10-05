@@ -38,4 +38,9 @@ public class ArbolBinario<T extends Comparable> {
     }
 
 
+    void print(){
+        if(root!= null)
+            root.print(false,"");
+    }
+
 }
